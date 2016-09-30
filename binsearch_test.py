@@ -20,6 +20,17 @@ def tests_two():
 	assert binary_search(input, 5, 1,3) == -1
 	assert binary_search(input, 2, 2, 2) == 2
 
+def tests_thee():
+	# Test a case with odd len
+	assert binary_search(list(range(99)), 5) == 5
+	# Odd structure 
+	input = [0] * 99
+	input[20] = 5
+	assert binary_search(input, 5) == -1
+	
+
+
+
 def test_input_type():
 	#error conditions
 	with raises(TypeError):
