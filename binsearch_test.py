@@ -1,5 +1,6 @@
 from pytest import raises
-
+from binsearch import binary_search
+import numpy as np
 
  # >>> input = list(range(10))
  #    >>> binary_search(input, 5)
@@ -29,9 +30,17 @@ from pytest import raises
 
 input = list(range(10))
 
-def test(1):
+def test1():
 	assert binary_search(input, 5) == 5
-	assert binary_search(input, 4) == -1
+
+def test2():
+	assert binary_search(input, 4.5) == -1
+
+def test3():
+	assert binary_search(input, 10) == -1
+
+def test4():
+	assert binary_search([5], 5) == 0
 
 # def test_mymath_mean():
 #     assert myaverage([9,3]) == 6
