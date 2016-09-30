@@ -30,17 +30,15 @@ import numpy as np
 
 input = list(range(10))
 
-def test1():
+def provided_examples():
 	assert binary_search(input, 5) == 5
-
-def test2():
 	assert binary_search(input, 4.5) == -1
-
-def test3():
 	assert binary_search(input, 10) == -1
-
-def test4():
 	assert binary_search([5], 5) == 0
+	assert binary_search([5], 4) == -1 
+
+
+	
 
 # def test_mymath_mean():
 #     assert myaverage([9,3]) == 6
